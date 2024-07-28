@@ -8,8 +8,9 @@
 ///
 @_exported import Foundation
 
+
 ///
-public extension String {
+extension String {
     
     /// Encodes this `String` to `Data` using UTF8.
     ///
@@ -21,7 +22,7 @@ public extension String {
     /// https://www.objc.io/blog/2018/02/13/string-to-data-and-back/
     /// and subsequently deemed to be sound and unexpiring advice, given the explicit fact that UTF8 is the permanently (ABI-related) preferred encoding for `Swift.String`, as stated in this article on swift.org:
     /// https://www.swift.org/blog/utf8-string/
-    var utf8Data: Data {
+    public var utf8Data: Data {
         self.data(using: .utf8)!
     }
 }
